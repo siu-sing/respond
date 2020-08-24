@@ -4,7 +4,7 @@ A simple Speech Generating Device (SGD) to assist and supplement individuals wit
 
 Designed for mobile.
 
-Add siu-sing.github.io/respond as a shortcut on your mobile phone's home screen.
+Add [siu-sing.github.io/respond](https://siu-sing.github.io/respond/) as a shortcut on your mobile phone's home screen.
 
 #### Todo
 - Rewrite buttons and sound clips as individual components
