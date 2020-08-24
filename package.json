@@ -12,7 +12,7 @@
 		"react-dom": "^16.13.1",
 		"react-scripts": "3.4.3"
     },
-    "homepage": "http://siu-sing.github.io/respond"
+    "homepage": "http://siu-sing.github.io/respond",
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
