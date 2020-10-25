@@ -5,7 +5,7 @@ export const responses = {
     "options":[1,2,3,4],
     "toilet":"🚽",
     "sleep":"💤",
-    "massage chair":"Massage Chair",
+    "massageChair":"Massage",
     "stand":"Stand",
     "sit":"Sit",
     "tv":"📺",

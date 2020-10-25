@@ -16,8 +16,10 @@ html, body, .container-fluid {
     height: 100vh;
     margin: 0;
     background-color: #dcdcdc;
+    padding-left:0 !important; 
+    padding-right:0 !important;
 }
 
-.respond__button {
-    height: 20vh;
+.button__text {
+    font-size: 14vw;
 }
