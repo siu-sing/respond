@@ -9,7 +9,7 @@ function App() {
 
     return (
         <>
-            <Container fluid className="d-flex flex-column justify-content-around border border-success">
+            <Container fluid className="d-flex flex-column justify-content-around">
                 <RespondButton display={responses.yes} color={"success"} />
                 <RespondButton display={responses.no} color={"danger"} />
                 <RespondButton display={responses.notSure} color={"secondary"} />
