@@ -12,11 +12,12 @@ code {
 		monospace;
 }
 
-html, body, .container {
+html, body, .container-fluid {
     height: 100vh;
+    margin: 0;
     background-color: #dcdcdc;
 }
 
-.yes, .no {
-    height:50vh;
+.respond__button {
+    height: 20vh;
 }

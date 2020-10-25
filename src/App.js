@@ -1,45 +1,20 @@
 import React from 'react';
 import './App.css';
 import { Button, Row, Container, Col } from 'react-bootstrap';
+import RespondButton from './RespondButton';
+import { responses } from './responseTypes'
 
 
 function App() {
 
-    let playYes = () => {
-        console.log("yes")
-        const audioEl = document.getElementsByClassName("audio-yes")[0]
-        audioEl.play()
-    }
-
-    let playNo = () => {
-        console.log("no")
-        const audioEl = document.getElementsByClassName("audio-no")[0]
-        audioEl.play()
-    }
-
     return (
-        <Container className="">
-            <Row className="">
-                <Col className="yes text-center d-flex m-2">
-                    <Button onClick={playYes} className="btn-block btn-success">
-                        <span className="display-1">YES</span>
-                        <audio className="audio-yes">
-                            <source src="https://www.pacdv.com/sounds/voices/yes-5.wav"></source>
-                        </audio>
-                    </Button>
-                </Col>
-            </Row>
-            <Row>
-                <Col className="no text-center d-flex m-2">
-                    <Button onClick={playNo} className="btn-block btn-danger">
-                        <span className="display-1">NO</span>
-                        <audio className="audio-no">
-                            <source src="https://www.pacdv.com/sounds/voices/no-2.wav"></source>
-                        </audio>
-                    </Button>
-                </Col>
-            </Row>
-        </Container>
+        <>
+            <Container fluid className="d-flex flex-column justify-content-around border border-success">
+                <RespondButton display={responses.yes} color={"success"} />
+                <RespondButton display={responses.no} color={"danger"} />
+                <RespondButton display={responses.notSure} color={"secondary"} />
+            </Container>
+        </>
     );
 }
 
