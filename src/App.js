@@ -34,7 +34,7 @@ function App() {
     return (
         <>
             <Container fluid className="d-flex flex-column justify-content-around">
-                <Router basename="https://siu-sing.github.io/">
+                <Router basename="https://siu-sing.github.io">
                     <Switch>
                         <Route exact path="/respond">
                             {mainDisplay}
