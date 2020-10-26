@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { Button, Row, Container, Col } from 'react-bootstrap';
 import RespondButton from './RespondButton';
 import { responses } from './responseTypes'
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Switch from 'react-bootstrap/esm/Switch';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 
 function App() {
@@ -31,21 +31,47 @@ function App() {
     ))
     )
 
+    let loveDisplayConfig = [
+        { display: "I ♥️ 老婆", color: "light" },
+        { display: `多謝老婆`, color: "light" },
+    ]
+
+    let loveDisplay = (loveDisplayConfig.map((b, idx) => (
+        <RespondButton display={b.display} color={b.color} height={30} />
+    ))
+    )
+
+    const [display, setDisplay] = useState(mainDisplay);
+
+    let updateDisplay = (e) => {
+        switch (e.target.name) {
+            case "mainDisplay":
+                setDisplay(mainDisplay);
+                break;
+            case "actionDisplay":
+                setDisplay(actionDisplay);
+                break;
+            case "loveDisplay":
+                setDisplay(loveDisplay);
+                break;
+            default:
+                break;
+        }
+    }
+
     return (
         <>
-            <Container fluid className="d-flex flex-column justify-content-around">
-                <Router basename="https://siu-sing.github.io">
-                    <Switch>
-                        <Route exact path="/respond">
-                            {mainDisplay}
-                            <RespondButton display="Actions" color="secondary" height={ht_vh / 1.8} link="respond/actions" />
-                        </Route>
-                        <Route path="/respond/actions">
-                            {actionDisplay}
-                            <RespondButton display="🔙" color="secondary" height={ht_vh / 1.8} link="respond" />
-                        </Route>
-                    </Switch>
-                </Router>
+            <Container fluid className="d-flex flex-column justify-content-center">
+                {display}
+                <Row>
+                    <Col className="d-flex justify-content-around">
+                        <Button size="lg" onClick={updateDisplay} name="mainDisplay" variant="light">Main</Button>
+                        <Button size="lg" onClick={updateDisplay} name="actionDisplay" variant="light">Actions</Button>
+                        <Button size="lg" onClick={updateDisplay} name="loveDisplay" variant="light">
+                            <FontAwesomeIcon onClick={updateDisplay} name="loveDisplay" icon={faHeart} />
+                        </Button>
+                    </Col>
+                </Row>
             </Container>
         </>
     );

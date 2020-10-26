@@ -21,7 +21,7 @@ html, body, .container-fluid {
 }
 
 .button__text {
-    /* font-size: 14vw; */
+    font-size: 14vw;
 }
 
 .custom-control {

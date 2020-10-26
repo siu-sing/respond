@@ -13,7 +13,7 @@ export default function RespondButton(props) {
 
                 <Button
                     className={`btn-block btn-${color} respond__button`}
-                    style={{ height: `${height}vh` }}
+                    style={height && { height: `${height}vh` }}
                     href={link && linkUrl}
                 >
                     <span className="button__text">{display}</span>
