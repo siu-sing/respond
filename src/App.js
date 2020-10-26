@@ -33,14 +33,14 @@ function App() {
 
     return (
         <>
-            <Container className="d-flex flex-column justify-content-around">
-                <Router>
+            <Container fluid className="d-flex flex-column justify-content-around">
+                <Router basename="https://siu-sing.github.io/">
                     <Switch>
                         <Route exact path="/respond">
                             {mainDisplay}
-                            <RespondButton display="Actions" color="secondary" height={ht_vh / 1.8} link="actions" />
+                            <RespondButton display="Actions" color="secondary" height={ht_vh / 1.8} link="respond/actions" />
                         </Route>
-                        <Route path="/actions">
+                        <Route path="/respond/actions">
                             {actionDisplay}
                             <RespondButton display="🔙" color="secondary" height={ht_vh / 1.8} link="respond" />
                         </Route>
