@@ -33,7 +33,7 @@ function App() {
 
     return (
         <>
-            <Container fluid className="d-flex flex-column justify-content-around">
+            <Container className="d-flex flex-column justify-content-around">
                 <Router>
                     <Switch>
                         <Route exact path="/respond">
