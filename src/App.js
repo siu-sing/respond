@@ -32,8 +32,8 @@ function App() {
     )
 
     let loveDisplayConfig = [
-        { display: "I ♥️ 老婆", color: "light" },
-        { display: `多謝老婆`, color: "light" },
+        { display: "I ♥️ WIFE", color: "light" },
+        { display: `Thank You Wife`, color: "light" },
     ]
 
     let loveDisplay = (loveDisplayConfig.map((b, idx) => (
